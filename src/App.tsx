@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Music2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SPOTIFY_CONFIG } from './config/spotify';
-import Callback from './components/Callback';
+import Callback from './components/callback';
+import Dashboard from './components/Dashboard';
 
 function Login() {
   const { t } = useTranslation();
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/callback" element={<Callback />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );
